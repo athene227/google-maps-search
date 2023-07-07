@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: white;
+}
+
+.background-gradient {
+  background: linear-gradient(94.99deg, rgb(26, 178, 217) 28.48%, rgb(0, 120, 255) 141.74%);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    margin-top: 20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+.fade-in {
+  animation: fade-in .8s forwards;
+}
+
+.geocoder-container {
+  width: 100%;
+}
+
+.geoapify-autocomplete-input {
+  border: none !important;
+  font-size: 24px !important;
+  line-height: 36px !important;
+  outline: none !important;
+  color: #263238 !important;
+  margin-left: 16px !important;
+}
+
+.geoapify-autocomplete-items {
+  margin-top: 16px;
+  border-radius: 8px;
+  border: none !important;
+  box-shadow: rgba(87, 73, 109, 0.12) 2px 0px 22px 0px !important;
+}
+
+.geoapify-autocomplete-item {
+  font-size: 18px !important;
+  padding: 16px 24px !important;
+}
+
+.geoapify-autocomplete-items div:hover {
+  background-color: #f2f8ff !important;
+}
+
+.neighborhood-chip {
+  padding: 12px 24px;
+  background: linear-gradient(94.99deg, rgba(26, 178, 217, 0.1) 28.48%, rgba(0, 120, 255, 0.1) 141.74%);
+}
